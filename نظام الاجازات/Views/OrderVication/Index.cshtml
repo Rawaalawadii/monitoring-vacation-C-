@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Render Partial View As Modal Popup Using AJAX call with JSON";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="~/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+<link href="~/css/style.css" rel="stylesheet" media="screen">
+<div class="container top">
+
+    <section class="row contact">
+        <form>
+            <fieldset>
+                <label>الاسم </label>
+                <input class="span6" type="text" placeholder="الاسم الشخصي">
+                <label>الرقم الوظيفى</label>
+                <input class="span6" id="comment" type="text" placeholder="اسم العائلة">
+                
+
+
+                   <label>نوع الاجازة </label>
+       
+        <select id="vacation">
+            <option value="اعتيادية">اعتيادية</option>
+            <option value="مرضية">مرضية</option>
+            
+        </select> 
+                <button class="btn btn-info submit" onclick="SaveData()" type="submit">ارسال الطلب <i class="icon-envelope icon-white"></i></button>
+            </fieldset>
+        </form>
+    </section><!-- End FORM -->
+
+    
+
+</div>
+<script>
+    function SaveData() {
+          $.ajax({
+              url: "/OrderVication/SaveData",
+            type: "POST",
+              data: JSON.stringify({ typevacation: $("#vacation").val(), comment: $("#comment").val()}),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json", 
+            success: function (data) {
+                if (data.status == "Success") {
+                    alert("Done");
+                    window.location.href='@Url.Action("Index", "Home" )'
+                } else {
+                    alert("Error occurs on the Database level!");
+                }
+            },
+            error: function () {
+                alert("An error has occured!!!");
+            }
+        });
+    }
+</script>

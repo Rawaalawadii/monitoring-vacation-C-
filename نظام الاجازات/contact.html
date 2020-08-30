@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <title>Arabic HTML Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <!--[if lt IE 9]>
+            <script src="dist/html5shiv.js"></script>
+    <![endif]-->  
+  </head>
+  <body>
+    <header>
+  	 <nav class="navbar navbar-static-top">
+	  			<div class="navbar-inner">
+	  				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+          <h3 class="pull-left">
+            <a href="#">
+              <img src="img/logo.png" alt="doctors logo" />
+            </a>
+          </h3>
+					<div class="nav-collapse">					
+		  				<ul class="nav">
+  					      <li><a href="index.html">الرئسية</a></li>
+	                <li><a href="#">تعرف علينا</a></li>
+	                <li><a href="tips.html">نصائح</a></li>
+	                <li><a href="#">ملاحظات</a></li>    
+	                <li class="active"><a href="contact.html">اتصل بنا</a></li>
+		  				</ul>
+	  				</div>
+	  			</div>
+  		</nav>
+    </header><!-- End header -->
+
+    <div class="container top">
+
+<section class="row contact">
+        <form>
+          <fieldset>
+            <label>الاسم الاول</label>
+            <input class="span6" type="text" placeholder="الاسم الشخصي">
+            <label>اسم العائلة</label>
+            <input class="span6" type="text" placeholder="اسم العائلة">
+            <label>رقم الهاتف</label>
+            <input class="span6" type="text" placeholder="هاتف المنزل">
+            <label>البريد الاكتروني</label>
+            <input class="span6" type="text" placeholder="البريد الاكتروني">
+
+            <label>بدء الالم منذ </label>
+            <label class="checkbox inline"><input type="checkbox" id="inlineCheckbox1" value="option1"> ايام</label>
+            <label class="checkbox inline">
+              <input type="checkbox" id="inlineCheckbox2" value="option2"> شهور
+            </label>
+            <label class="checkbox inline">
+              <input type="checkbox" id="inlineCheckbox3" value="option3"> سنين
+            </label>
+
+            <label>حالت الجسم</label>
+            <select>
+              <option>الام الظهر</option>
+              <option>للام المعدة</option>
+              <option>الام المفاصل</option>
+              <option>الام الجسم</option>
+            </select>
+
+            <label class="control-label">الموضوع</label>
+            <textarea class="span6" rows="10" placeholder="عن ماذا تريد ان تتكلم"></textarea>
+            <button class="btn btn-info submit" type="submit">ارسال الرسالة <i class="icon-envelope icon-white"></i></button>
+          </fieldset>
+        </form>
+      </section><!-- End FORM -->     
+
+      <footer class="row">
+        <div class="span3">
+          <p>
+            <a href="#">doctors.com  &copy;</a>
+          </p>
+        </div>
+    </footer>
+
+  </div><!-- End container -->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿ @model List<OrderVication>
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var num = 1;
+}
+<h1>قائمة الطلبات</h1>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>أسم الموظف</th>
+                <th>نوع الاجازة</th>
+                
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+
+               <tr>
+                    <td>@num </td>
+                    <td>@item.Employee.Name </td>
+                    <td>@item.TypeVications </td>
+                    
+
+                </tr>
+                num++;
+            }
+
+        </tbody>
+    </table>
+</div>
+<br /><br /><br /><br /><br /><br /><br />
